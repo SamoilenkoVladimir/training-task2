@@ -20,7 +20,7 @@ public class Main {
  		//в15  В некотором предложении текста слова заданной длины заменить указанной подстрокой, длина которой может не совпадать с длиной слова.
 		
 		
-        try (BufferedReader br = new BufferedReader(new FileReader("book1.txt")))
+        try (BufferedReader br = new BufferedReader(new FileReader("book1.txt"))) //книга считывается из файла
         {
 
            String sCurrentLine;
@@ -64,7 +64,7 @@ public class Main {
 		    	replace=str.nextLine();
 		    	str.close();
 		    	System.out.println("Ваша подстрока:\n"+replace);
-		    	replace=replacement.wordReplace(book[num-1],replace,wordLength);
+		    	replace=Replacement.wordReplace(book[num-1],replace,wordLength);
 		    	System.out.println("Новая строка:\n"+replace);
 		    	book[num-1]=replace;
 		    	exit = true;
@@ -105,4 +105,3 @@ public class Main {
 	}
 
 }
-
